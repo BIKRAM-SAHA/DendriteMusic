@@ -1,0 +1,46 @@
+@import "../../../scss/animate.scss";
+
+.spinnerContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 2em;
+  transform-origin: center;
+  @include animate(rotate4, 2s, infinite, linear);
+}
+
+.circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  @include animate(dash4, 1.5s, infinite, ease-in-out);
+}
+
+@include keyframes(rotate4) {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(dash4) {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}

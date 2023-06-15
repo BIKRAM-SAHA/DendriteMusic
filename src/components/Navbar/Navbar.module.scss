@@ -1,0 +1,25 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../node_modules/bootstrap/scss/mixins";
+
+.navbar {
+  background-color: $indigo;
+  min-height: 100%;
+  .text {
+    color: $white;
+    &:visited,
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+  }
+  .offcanvas {
+    background-color: $indigo;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar {
+    min-height: auto;
+  }
+}

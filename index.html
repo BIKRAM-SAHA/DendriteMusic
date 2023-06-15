@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dendrite Music</title>
+  </head>
+  <body>
+    <div id="root">
+      <style>
+        .dots-container {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+        }
+        .dot {
+          height: 20px;
+          width: 20px;
+          margin-right: 10px;
+          border-radius: 10px;
+          background-color: #f3b3fc;
+          animation: pulse 1.5s infinite ease-in-out;
+        }
+        .dot:last-child {
+          margin-right: 0;
+        }
+        .dot:nth-child(1) {
+          animation-delay: -0.3s;
+        }
+        .dot:nth-child(2) {
+          animation-delay: -0.1s;
+        }
+        .dot:nth-child(3) {
+          animation-delay: 0.1s;
+        }
+        @keyframes pulse {
+          0% {
+            transform: scale(0.8);
+            background-color: #dcb3fc;
+            box-shadow: 0 0 0 0 rgba(221, 178, 252, 0.7);
+          }
+          50% {
+            transform: scale(1.2);
+            background-color: #ca67fb;
+            box-shadow: 0 0 0 10px rgba(231, 178, 252, 0);
+          }
+          100% {
+            transform: scale(0.8);
+            background-color: #e5b3fc;
+            box-shadow: 0 0 0 0 rgba(224, 178, 252, 0.7);
+          }
+        }
+      </style>
+      <section class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

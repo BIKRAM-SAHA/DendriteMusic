@@ -1,0 +1,22 @@
+.searchBox {
+  .inputForm {
+    position: relative;
+    .leftPan {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .suggestions {
+      position: absolute;
+      background-color: antiquewhite;
+      width: 100%;
+      cursor: pointer;
+      .suggestion {
+        padding: 5px 10px;
+        &:hover {
+          background-color: aliceblue;
+        }
+      }
+    }
+  }
+}
